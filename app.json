@@ -7,9 +7,10 @@
     ],
     "website": "https://github.com/PredatorHackerzZ/PdiskVideoBot/",
     "repository": "https://github.com/PredatorHackerzZ/PdiskVideoBot/",
+    "logo": "https://telegra.ph/file/51a84cdd8254ee0406683.jpg", 
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token",
+            "description": "Your bot token from @Botfather",
             "value": ""
         },
         "API_ID": {
