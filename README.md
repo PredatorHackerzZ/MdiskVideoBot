@@ -20,7 +20,8 @@ Make short link by using [Pdisk](https://www.cofilink.com/use-api/) API key
 <a href="https://t.me/TeleRoidGroup"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Channel-yellow.svg?logo=telegram"></a>
 
 
-👨‍💻 <b>DEV</b>
+
+👨‍💻 <b>MASTER</b>
 
 <p align="middle">
 <img src="https://telegra.ph/file/024846dd18debc64c91e8.jpg" width="150" height="150"><br>
