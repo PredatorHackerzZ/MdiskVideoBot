@@ -1,0 +1,40 @@
+{
+    "name": "PdiskShortener-Bot",
+    "description": "Make short link by using PdiskShortener API key",
+    "keywords": [
+        "telegram",
+        "PdiskShortener"
+    ],
+    "website": "https://github.com/kevinnadar264/pdiskshortner/",
+    "repository": "https://github.com/kevinnadar264/pdiskshortner/",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Get this value from https://t.me/ScrapperRoBot",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get this value from https://t.me/ScrapperRoBot",
+            "value": ""
+        },
+        "API_KEY": {
+            "description": "Get API key from pdiskshortner.net/member/tools/api",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
