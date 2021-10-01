@@ -1,18 +1,18 @@
 # 𝐏𝐝𝐢𝐬𝐤 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐞𝐫 𝐁𝐨𝐭
-Make short link by using [Pdisk](https://www.cofilink.com/use-api/) API key
+Make short link by using [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api/) API key
 ### Installation
 
-#### The Easy Way
+#### 𝐓𝐡𝐞 𝐄𝐚𝐬𝐲 𝐖𝐚𝐲
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PredatorHackerzZ/PdiskVideoBot)
 
-##### Required Variables
+##### 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
-* `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
+* `BOT_TOKEN`: 𝐂𝐫𝐞𝐚𝐭𝐞 𝐚 𝐛𝐨𝐭 𝐮𝐬𝐢𝐧𝐠 [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
 
-* `API_ID`: Get this value from [telegram.org](https://my.telegram.org/apps)
-* `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
-* `API_KEY`: Create [Pdisk](https://www.cofilink.com/use-api) account then get this value
+* `API_ID`: 𝐆𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞 𝐟𝐫𝐨𝐦 [telegram.org](https://my.telegram.org/apps)
+* `API_HASH`: 𝐆𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞 𝐟𝐫𝐨𝐦 [telegram.org](https://my.telegram.org/apps)
+* `API_KEY`: 𝐂𝐫𝐞𝐚𝐭𝐞 [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api) 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐭𝐡𝐞𝐧 𝐠𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞
 
 ### 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩:
 <a href="https://t.me/TeleRoid14"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-green.svg?logo=telegram"></a>
@@ -21,7 +21,7 @@ Make short link by using [Pdisk](https://www.cofilink.com/use-api/) API key
 
 
 
-👨‍💻 <b>MASTER</b>
+👨‍💻 <b>𝐌𝐀𝐒𝐓𝐄𝐑</b>
 
 <p align="middle">
 <img src="https://telegra.ph/file/024846dd18debc64c91e8.jpg" width="150" height="150"><br>
