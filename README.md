@@ -4,7 +4,7 @@ Make short link by using [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api
 
 #### 𝐓𝐡𝐞 𝐄𝐚𝐬𝐲 𝐖𝐚𝐲
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/STARTINGDEVELOPER/PdiskVideoBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://heroku.com/deploy?template=https://github.com/STARTINGDEVELOPER/PdiskVideoBot)
 
 ##### 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
