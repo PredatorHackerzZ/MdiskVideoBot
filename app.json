@@ -1,29 +1,38 @@
 {
-    "name": "PdiskVideoBot",
-    "description": "Make short link by using PdiskShortener API key by @PredatorHackerzZ",
+    "name": "PDisk Uploader Bot",
+    "description": "Upload Pdisk Link Or Url to Pdisk...",
     "keywords": [
         "telegram",
-        "PdiskShortener"
+        "pdisk",
+        "shortner"
     ],
     "website": "https://github.com/PredatorHackerzZ/PdiskVideoBot/",
     "repository": "https://github.com/PredatorHackerzZ/PdiskVideoBot/",
     "logo": "https://telegra.ph/file/51a84cdd8254ee0406683.jpg", 
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token from @Botfather",
+            "description": "Your bot token (must add)",
             "value": ""
         },
         "API_ID": {
-            "description": "Get this value from https://t.me/ScrapperRoBot",
-            "value": ""
+            "description": "Get this value from https://my.telegram.org",
+            "value": "2387090"
         },
         "API_HASH": {
-            "description": "Get this value from https://t.me/ScrapperRoBot",
-            "value": ""
+            "description": "Get this value from https://my.telegram.org",
+            "value": "04fc2de75c898324561286e5b10bd619"
         },
-        "API_KEY": {
-            "description": "Get API key from pdiskshortner.net/member/tools/api",
-            "required": false
+        "PDISK_API_KEY": {
+            "description": "Get this from https://www.pdisk.me/use-api (must change)",
+            "value": "d03ea83365f488f7003c885ed132615b"
+        },
+        "CHANNEL": {
+            "description": "Enter your telegram channel Username (must change and without @)",
+            "value": "TheTeleRoid"
+        },
+        "THUMB_URL": {
+            "description": "Enter the permanent thumbnail image url can use this @TeleRoid_Image2Link_BOT",
+            "value" : "https://telegra.ph/file/51a84cdd8254ee0406683.jpg"
         }
     },
     "addons": [],
