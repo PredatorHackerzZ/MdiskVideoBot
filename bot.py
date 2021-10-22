@@ -147,9 +147,9 @@ async def remove_username(new_List):
 async def addFooter(str):
     footer = """
 ━━━━━━━━━━━━━━━
-⚙️ How to Download / Watch Online or Change Audio : https://bit.ly/pdisk_tuts
+⚙️ How to Download / Watch Online or Change Audio : Get Yourself
 ━━━━━━━━━━━━━━━
-⭐️JOIN CHANNEL ➡️ t.me/""" + CHANNEL
+⭐ JOIN CHANNEL ➡️ t.me/""" + CHANNEL
     return str + footer
 
 bot.run()
