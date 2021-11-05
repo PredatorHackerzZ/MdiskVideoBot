@@ -24,10 +24,13 @@ bot = Client('pdisk bot',
 
 @bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
-    await message.reply(
-        f"**𝐇𝐞𝐥𝐥𝐨! 👨‍💻{message.chat.first_name}!**\n\n"
-        "𝐈'𝐦 𝐚 𝐏𝐝𝐢𝐬𝐤 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐫 𝐛𝐨𝐭. 𝐉𝐮𝐬𝐭 𝐬𝐞𝐧𝐝 𝐦𝐞 𝐥𝐢𝐧𝐤 𝐨𝐫 𝐅𝐮𝐥𝐥 𝐩𝐨𝐬𝐭... \n 𝐓𝐡𝐢𝐬 𝐛𝐨𝐭 𝐢𝐬 𝐦𝐚𝐝𝐞 𝐛𝐲 [@ᴛɢᴇᴛᴇʟᴇʀᴏɪᴅ](https://t.me/TheTeleRoid)")
-
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=ʜᴇʟʟᴏ! ᴅᴇᴀʀ ᴛʜɪs ɪs ᴀ ᴘᴅɪsᴋ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ ,
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id,
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text="⭕️ 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ⭕️", url="https://t.me/TeleRoidGroup") ] ] ) )
 
 @bot.on_message(filters.text & filters.private)
 async def pdisk_uploader(bot, message):
@@ -147,9 +150,9 @@ async def remove_username(new_List):
 async def addFooter(str):
     footer = """
 ━━━━━━━━━━━━━━━
-📌 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ ᴏʀ ᴄʜᴀɴɢᴇ ᴀᴜᴅɪᴏ : Get Tuts On https://t.me/joinchat/xxz1cj6N1jswYmNl
+📌 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ Get Tuts On [@Pᴅɪsᴋ_ᴛᴜᴛs](https://t.me/joinchat/xxz1cj6N1jswYmNl). 
 ━━━━━━━━━━━━━━━
-📢 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ➡ @""" + CHANNEL
+📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ➡ @""" + CHANNEL
     return str + footer
 
 bot.run()
