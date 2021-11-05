@@ -22,15 +22,13 @@ bot = Client('pdisk bot',
              sleep_threshold=0)
 
 
+
 @bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text="ʜᴇʟʟᴏ! ᴅᴇᴀʀ ᴛʜɪs ɪs ᴀ ᴘᴅɪsᴋ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ", 
-        parse_mode="html",
-        disable_web_page_preview=True,
-        reply_to_message_id=update.message_id,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton(text="⭕️ 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ⭕️", url="https://t.me/TeleRoidGroup") ] ] ) )
+    await message.reply(
+        f"**𝐇𝐞𝐥𝐥𝐨! 👨‍💻{message.chat.first_name}!**\n\n"
+        "𝐈'𝐦 𝐚 𝐏𝐝𝐢𝐬𝐤 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐫 𝐛𝐨𝐭. 𝐉𝐮𝐬𝐭 𝐬𝐞𝐧𝐝 𝐦𝐞 𝐥𝐢𝐧𝐤 𝐨𝐫 𝐅𝐮𝐥𝐥 𝐩𝐨𝐬𝐭... \n 𝐓𝐡𝐢𝐬 𝐛𝐨𝐭 𝐢𝐬 𝐦𝐚𝐝𝐞 𝐛𝐲 [@MoviesFlixers_DL](https://t.me/MoviesFlixers_DL)")
+
 
 @bot.on_message(filters.text & filters.private)
 async def pdisk_uploader(bot, message):
