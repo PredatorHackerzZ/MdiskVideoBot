@@ -26,7 +26,7 @@ bot = Client('pdisk bot',
 async def start(bot, message):
     await bot.send_message(
         chat_id=update.chat.id,
-        text=ʜᴇʟʟᴏ! ᴅᴇᴀʀ ᴛʜɪs ɪs ᴀ ᴘᴅɪsᴋ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ ,
+        text="ʜᴇʟʟᴏ! ᴅᴇᴀʀ ᴛʜɪs ɪs ᴀ ᴘᴅɪsᴋ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ", 
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id,
