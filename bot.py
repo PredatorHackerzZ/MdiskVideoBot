@@ -150,7 +150,7 @@ async def addFooter(str):
 ━━━━━━━━━━━━━━━
 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ Get Tuts On [@Pᴅɪsᴋ_ᴛᴜᴛs](https://t.me/joinchat/xxz1cj6N1jswYmNl). 
 ━━━━━━━━━━━━━━━
-📢 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 
+📢 𝐉𝐨𝐢𝐧 𝐁𝐚𝐜𝐤𝐔𝐏 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
            🔅 @""" + CHANNEL 🔅
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ 
