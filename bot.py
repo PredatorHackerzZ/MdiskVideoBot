@@ -4,16 +4,17 @@ import time
 from urllib.parse import urlparse
 import aiohttp
 from pyrogram import Client, filters
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 import re
 
-API_ID = environ.get('API_ID')
-API_HASH = environ.get('API_HASH')
+API_ID = environ.get('API_ID', '6')
+API_HASH = environ.get('API_HASH', 'eb06d4abfb49dc3eeb1aeb98ae0f581e')
 BOT_TOKEN = environ.get('BOT_TOKEN')
 PDISK_API_KEY = environ.get('PDISK_API_KEY')
-THUMB_URL = environ.get('THUMB_URL', 'https://telegra.ph/file/92e2bc36057b76c4ef8f8.jpg')
-CHANNEL = environ.get('CHANNEL')
+CHANNEL = environ.get('CHANNEL', 'MyTestBotZ')
+THUMB_URL = environ.get('THUMB_URL', '')
+
 bot = Client('pdisk bot',
              api_id=API_ID,
              api_hash=API_HASH,
@@ -22,14 +23,13 @@ bot = Client('pdisk bot',
              sleep_threshold=0)
 
 
-
 @bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     await message.reply(
-        f"**𝐇𝐞𝐥𝐥𝐨! 👨‍💻{message.chat.first_name}!**\n\n"
-        "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐚 𝐏𝐝𝐢𝐬𝐤 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐫 𝐛𝐨𝐭. 𝐉𝐮𝐬𝐭 𝐬𝐞𝐧𝐝 𝐦𝐞 𝐥𝐢𝐧𝐤 𝐨𝐫 𝐅𝐮𝐥𝐥 𝐩𝐨𝐬𝐭... \n 𝐓𝐡𝐢𝐬 𝐛𝐨𝐭 𝐢𝐬 𝐦𝐚𝐝𝐞 𝐛𝐲 𝐌𝐨𝐯𝐢𝐞𝐬 𝐎𝐰𝐧𝐞𝐫 [@MoviesFlixers_DL](https://t.me/MoviesFlixers_DL)")
+        f"**Hola 👋{message.chat.first_name}!**\n\n"
+        "**A Simple PDisk Uploader Bot.\n\n➠ Send Me Any Direct Link, YouTube Link Or Video Link  I Will Upload To PDisk And Give Direct Link\n\nMade With ❤ BY @MoviesFlixers_DL**")
 
-
+    
 @bot.on_message(filters.text & filters.private)
 async def pdisk_uploader(bot, message):
     new_string = str(message.text)
@@ -38,7 +38,6 @@ async def pdisk_uploader(bot, message):
         await message.reply(f'{pdisk_link}', quote=True)
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
-
 
 @bot.on_message(filters.photo & filters.private)
 async def pdisk_uploader(bot, message):
@@ -79,7 +78,7 @@ async def get_ptitle(url):
     v_len = len(v_id)
     v_id = v_id[1:v_len - 2]
 
-    v_url = 'https://www.pdisks.com/share-video?videoid=' + v_id
+    v_url = 'https://www.pdisks.me/share-video?videoid=' + v_id
     res = [str, v_url]
     return res
 
@@ -94,12 +93,12 @@ async def pdisk_up(link):
         title_new = os.path.basename(title_new.path)
         title_pdisk = '@' + CHANNEL + title_new
     res = requests.get(
-        'http://linkapi.net/open/create_item?link_type=link&content_src=' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join_' + CHANNEL + '_for_more_like_this')
+        'http://linkapi.net/open/create_item?link_type=link&content_src=' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join_@TheTeleRoid_' + 'CHANNEL' + '_and_support_us')
     data = res.json()
     data = dict(data)
     print(data)
     v_id = data['data']['item_id']
-    v_url = 'https://www.pdisk.me/share-video?videoid=' + v_id
+    v_url = 'https://www.pdisk.net/share-video?videoid=' + v_id
     return (v_url)
 
 
@@ -133,27 +132,28 @@ async def multi_pdisk_up(ml_string):
 async def new_pdisk_url(urls):
     new_urls = []
     for i in urls:
-        time.sleep(0.2)
+        time.sleep(0.3)
         new_urls.append(await pdisk_up(i))
     return new_urls
 
 
 async def remove_username(new_List):
     for i in new_List:
-        if('@' in i or 't.me' in i or 'https://t.me/joinchat/xxz1cj6N1jswYmNl' in i or 'https://t.me/joinchat/xxz1cj6N1jswYmNl' in i or 'telegra.ph' in i):
+        if('@' in i or 't.me' in i or 'https://bit.ly/3m4gabB' in i or 'https://bit.ly/pdisk_tuts' in i or 'telegra.ph' in i):
             new_List.remove(i)
     return new_List
 
 
 async def addFooter(str):
     footer = """
+    
+<b> Note : Your Video File is Available on Above LINK ones Upload Process is Complete, it Take Time Depend on Your File Size & My Server Upload Speed
+So,be Patient </b>  😴😴😴😴     
 ━━━━━━━━━━━━━━━
-ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ Get Tuts On [@Pᴅɪsᴋ_ᴛᴜᴛs](https://t.me/joinchat/xxz1cj6N1jswYmNl). 
+How to Watch Or [@Pᴅɪsᴋ_ᴛᴜᴛs](https://t.me/joinchat/xxz1cj6N1jswYmNl). 
+⦿ Made With♥️BY @TheTeleRoid
 ━━━━━━━━━━━━━━━
-📢 𝐉𝐨𝐢𝐧 𝐁𝐚𝐜𝐤𝐔𝐏 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-           🔅 @""" + CHANNEL 🔅
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ 
+✪ »JOIN CHANNEL ➡️ t.me/""" + CHANNEL
     return str + footer
 
 bot.run()
