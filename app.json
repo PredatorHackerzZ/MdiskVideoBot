@@ -1,6 +1,6 @@
 {
-    "name": "PDisk Uploader Bot",
-    "description": "Upload Pdisk Link Or Url to Pdisk...",
+    "name": "PDisk Video Uploader Bot",
+    "description": "Upload Pdisk Link Or Direct Url to Pdisk...",
     "keywords": [
         "telegram",
         "pdisk",
