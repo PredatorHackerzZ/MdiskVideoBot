@@ -11,7 +11,7 @@ Make short link by using [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api
 * `BOT_TOKEN`: 𝐂𝐫𝐞𝐚𝐭𝐞 𝐚 𝐛𝐨𝐭 𝐮𝐬𝐢𝐧𝐠 [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
 * `API_ID`: 𝐆𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞 𝐟𝐫𝐨𝐦 [telegram.org](https://my.telegram.org/apps)
 * `API_HASH`: 𝐆𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞 𝐟𝐫𝐨𝐦 [telegram.org](https://my.telegram.org/apps)
-* `API_KEY`: 𝐂𝐫𝐞𝐚𝐭𝐞 [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api) 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐭𝐡𝐞𝐧 𝐠𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞
+* `MDISK_TOKEN`: 𝐂𝐫𝐞𝐚𝐭𝐞 [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api) 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐭𝐡𝐞𝐧 𝐠𝐞𝐭 𝐭𝐡𝐢𝐬 𝐯𝐚𝐥𝐮𝐞
 
 ### 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩:
 <a href="https://t.me/TeleRoid14"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-green.svg?logo=telegram"></a>
