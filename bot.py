@@ -34,7 +34,7 @@ async def start(bot, message):
 @bot.on_message(filters.text & filters.private)
 async def Doodstream_uploader(bot, message):
     new_string = str(message.text)
-    conv = await message.reply("Ruko jara Sabar kro ✋")
+    conv = await message.reply("Processing your given URL ⚡")
     dele = conv["message_id"]
     try:
         Doodstream_link = await multi_Doodstream_up(new_string)
@@ -162,8 +162,8 @@ async def remove_username(new_List):
 
 async def addFooter(str):
     footer = """
-
-""" + CHANNEL + """ """
+━━━━━━━━━━━━━━━
+✪ »JOIN CHANNEL ➡️ t.me/""" + CHANNEL
     return str + footer
 
 bot.run()
