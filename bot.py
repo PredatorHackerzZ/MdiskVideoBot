@@ -1,21 +1,23 @@
 from os import environ
 import os
 import time
+from unshortenit import UnshortenIt
+from urllib.request import urlopen
 from urllib.parse import urlparse
 import aiohttp
 from pyrogram import Client, filters
-import requests
+from pyshorteners import Shortener
 from bs4 import BeautifulSoup
+#from doodstream import DoodStream
+import requests
 import re
 
 API_ID = environ.get('API_ID', '6')
 API_HASH = environ.get('API_HASH', 'eb06d4abfb49dc3eeb1aeb98ae0f581e')
 BOT_TOKEN = environ.get('BOT_TOKEN')
-PDISK_API_KEY = environ.get('PDISK_API_KEY')
-CHANNEL = environ.get('CHANNEL', 'MyTestBotZ')
-THUMB_URL = environ.get('THUMB_URL', '')
-
-bot = Client('pdisk bot',
+CHANNEL = environ.get('CUSTOM_FOOTER')
+MDISK_TOKEN = environ.get('MDISK_TOKEN')
+bot = Client('Doodstream bot',
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
@@ -29,80 +31,95 @@ async def start(bot, message):
         f"**Hola 👋{message.chat.first_name}!**\n\n"
         "**A Simple PDisk Uploader Bot.\n\n➠ Send Me Any Direct Link, YouTube Link Or Video Link  I Will Upload To PDisk And Give Direct Link\n\nMade With ❤ BY @MoviesFlixers_DL**")
 
-    
 @bot.on_message(filters.text & filters.private)
-async def pdisk_uploader(bot, message):
+async def Doodstream_uploader(bot, message):
     new_string = str(message.text)
+    conv = await message.reply("Ruko jara Sabar kro ✋")
+    dele = conv["message_id"]
     try:
-        pdisk_link = await multi_pdisk_up(new_string)
-        await message.reply(f'{pdisk_link}', quote=True)
+        Doodstream_link = await multi_Doodstream_up(new_string)
+        await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
+        await message.reply(f'**{Doodstream_link}**' , quote=True)
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
+
 
 @bot.on_message(filters.photo & filters.private)
-async def pdisk_uploader(bot, message):
+async def Doodstream_uploader(bot, message):
     new_string = str(message.caption)
+    conv = await message.reply("Processing your given URL ⚡")
+    dele = conv["message_id"]
     try:
-        pdisk_link = await multi_pdisk_up(new_string)
-        if(len(pdisk_link) > 1020):
-            await message.reply(f'{pdisk_link}', quote=True)
+        Doodstream_link = await multi_Doodstream_up(new_string)
+        if(len(Doodstream_link) > 1020):
+            await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
+            await message.reply(f'{Doodstream_link}' , quote=True)
         else:
-            await bot.send_photo(message.chat.id, message.photo.file_id, caption=f'{pdisk_link}')
+            await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
+            await bot.send_photo(message.chat.id, message.photo.file_id, caption=f'**{Doodstream_link}**')
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
 
 
-async def get_ptitle(url):
+'''async def get_ptitle(url):
+    if ('bit' in url ):
+      url = urlopen(url).geturl()
+      
+      
     html_text = requests.get(url).text
     soup = BeautifulSoup(html_text, 'html.parser')
     for title in soup.find_all('title'):
         pass
     title = list(title.get_text())
     title = title[8:]
-    str = '@' + CHANNEL + ' '
+    str = 't.me/' + CHANNEL + ' '
     for i in title:
         str = str + i
     lst = list(html_text.split(","))
     c = 0
     for i in lst:
-        if ("""videoid""" in i):
+        if ("""/e/""" in i):
             found = lst[c]
             break
         c += 1
 
-    # pdisk.net link
-    pdisk_video_id = list(found.split(":"))
-    video_id = pdisk_video_id[2]
+    # Doodstream.com link
+    Doodstream_video_id = list(found.split(":"))
+    video_id = Doodstream_video_id[2]
     video_id = list(video_id.split(","))
     v_id = video_id[0]
-    v_len = len(v_id)
-    v_id = v_id[1:v_len - 2]
+    #v_len = len(v_id)
+    #v_id = v_id[1:v_len - 2]
 
-    v_url = 'https://www.pdisks.me/share-video?videoid=' + v_id
+    v_url = 'https://vidzoop.blogspot.com/p/share-video.html?vid=' + v_id + '&m=1'
+    v_url = url
     res = [str, v_url]
-    return res
+    return res'''
 
 
-async def pdisk_up(link):
-    if ('pdisk' in link or 'kuklink' in link or 'kofilink' in link or 'cofilink' in link or 'bit' in link or link in 'vdshort' or link in 'vidrivers' or link in 'dplinks' or link in 'cdinks' or link in 'wslinker'):
-        res = await get_ptitle(link)
-        title_pdisk = res[0]
-        link = res[1]
-    else:
-        title_new = urlparse(link)
-        title_new = os.path.basename(title_new.path)
-        title_pdisk = '@' + CHANNEL + title_new
-    res = requests.get(
-        'http://linkapi.net/open/create_item?link_type=link&content_src=' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join_@TheTeleRoid_' + 'CHANNEL' + '_and_support_us')
+async def Doodstream_up(link):
+    if ('bit' in link ):
+        #link = urlopen(link).geturl()
+        unshortener = UnshortenIt()
+        link = unshortener.unshorten(link)
+    
+    title_new = urlparse(link)
+    title_new = os.path.basename(title_new.path)
+    title_Doodstream = '@' + CHANNEL + title_new
+    realaurl = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
+    param = {'token':f'{MDISK_TOKEN}','link':link}
+    res = requests.post(realaurl, json = param)         
     data = res.json()
     data = dict(data)
     print(data)
-    v_id = data['data']['item_id']
-    v_url = 'https://www.pdisk.net/share-video?videoid=' + v_id
+    #bot.delete_messages(con)
+    v_url = data['sharelink']
     return (v_url)
 
 
-async def multi_pdisk_up(ml_string):
+async def multi_Doodstream_up(ml_string):
+    list_string = ml_string.splitlines()
+    ml_string = ' \n'.join(list_string)
     new_ml_string = list(map(str, ml_string.split(" ")))
     new_ml_string = await remove_username(new_ml_string)
     new_join_str = "".join(new_ml_string)
@@ -118,7 +135,7 @@ async def multi_pdisk_up(ml_string):
             if (urls[j] in new_ml_string[i]):
                 url_index.append(count)
         count += 1
-    new_urls = await new_pdisk_url(urls)
+    new_urls = await new_Doodstream_url(urls)
     url_index = list(dict.fromkeys(url_index))
     i = 0
     for j in url_index:
@@ -129,31 +146,24 @@ async def multi_pdisk_up(ml_string):
     return await addFooter(new_string)
 
 
-async def new_pdisk_url(urls):
+async def new_Doodstream_url(urls):
     new_urls = []
     for i in urls:
-        time.sleep(0.3)
-        new_urls.append(await pdisk_up(i))
+        time.sleep(0.2)
+        new_urls.append(await Doodstream_up(i))
     return new_urls
 
 
 async def remove_username(new_List):
     for i in new_List:
-        if('@' in i or 't.me' in i or 'https://bit.ly/3m4gabB' in i or 'https://bit.ly/pdisk_tuts' in i or 'telegra.ph' in i):
+        if('@' in i or 't.me' in i or 'https://bit.ly/abcd' in i or 'https://bit.ly/123abcd' in i or 'telegra.ph' in i):
             new_List.remove(i)
     return new_List
 
-
 async def addFooter(str):
     footer = """
-    
-<b> Note : Your Video File is Available on Above LINK ones Upload Process is Complete, it Take Time Depend on Your File Size & My Server Upload Speed
-So,be Patient </b>  😴😴😴😴     
-━━━━━━━━━━━━━━━
-How to Watch Or [@Pᴅɪsᴋ_ᴛᴜᴛs](https://t.me/joinchat/xxz1cj6N1jswYmNl). 
-⦿ Made With♥️BY @TheTeleRoid
-━━━━━━━━━━━━━━━
-✪ »JOIN CHANNEL ➡️ t.me/""" + CHANNEL
+
+""" + CHANNEL + """ """
     return str + footer
 
 bot.run()
