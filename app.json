@@ -1,6 +1,6 @@
 {
-    "name": "PDisk Video Uploader Bot",
-    "description": "Upload Pdisk Link Or Direct Url to Pdisk...",
+    "name": "MDisk Video Uploader Bot",
+    "description": "Upload Mdisk Link Or Direct Url to Pdisk...",
     "keywords": [
         "telegram",
         "pdisk",
@@ -24,11 +24,7 @@
         },
         "MDISK_TOKEN": {
             "description": "MDisk API key here",
-            "value": "j219piqFPsQBhba52F4l"
-        },
-        "CUSTOM_FOOTER": {
-            "description": "Footer For Post",
-            "value": "⚡Powered By "
+            "value": "xdho92oqknpp82oakowm"
         },
         "CHANNEL": {
             "description": "Enter your telegram channel Username (must change and without @)",
