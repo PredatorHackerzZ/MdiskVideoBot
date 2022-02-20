@@ -1,10 +1,10 @@
 # 𝐏𝐝𝐢𝐬𝐤 𝐂𝐨𝐧𝐯𝐞𝐫𝐭𝐞𝐫 𝐁𝐨𝐭
-Make short link by using [𝐏𝐝𝐢𝐬𝐤](https://www.cofilink.com/use-api/) API key
+Make short link by using [MDisk](https://www.cofilink.com/use-api/) API key
 ### Installation
 
 #### 𝐓𝐡𝐞 𝐄𝐚𝐬𝐲 𝐖𝐚𝐲
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PredatorHackerzZ/PdiskVideoBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PredatorHackerzZ/MdiskVideoBot)
 
 ##### 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐝 𝐕𝐚𝐫𝐢𝐚𝐛𝐥𝐞𝐬
 
