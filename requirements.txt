@@ -1,7 +1,7 @@
 bs4
 pyrogram
 tgcrypto
-aiohttp==3.7.4
+aiohttp<=3.8.1
 requests
 pyshorteners
 #doodstream
