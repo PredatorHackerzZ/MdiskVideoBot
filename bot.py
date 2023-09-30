@@ -16,7 +16,7 @@ API_ID = environ.get('API_ID', '6')
 API_HASH = environ.get('API_HASH', 'eb06d4abfb49dc3eeb1aeb98ae0f581e')
 BOT_TOKEN = environ.get('BOT_TOKEN')
 CHANNEL = environ.get('CUSTOM_FOOTER')
-MDISK_TOKEN = environ.get('MDISK_TOKEN')
+TERABOX_TOKEN = environ.get('MDISK_TOKEN')
 bot = Client('Doodstream bot',
              api_id=API_ID,
              api_hash=API_HASH,
@@ -29,7 +29,7 @@ bot = Client('Doodstream bot',
 async def start(bot, message):
     await message.reply(
         f"**Hola 👋{message.chat.first_name}!**\n\n"
-        "**A Simple PDisk Uploader Bot.\n\n➠ Send Me Any Direct Link, YouTube Link Or Video Link  I Will Upload To PDisk And Give Direct Link\n\nMade With ❤ BY @MoviesFlixers_DL**")
+        "**A Simple Terabox Link Converter Bot.\n\n➠ Send Me Any Direct Link, YouTube Link Or Video Link  I Will Upload To Terabox And Give Your Account Uploaded Terabox Link\n\nMade With ❤ BY @MoviesFlixers_DL**")
 
 @bot.on_message(filters.text & filters.private)
 async def Doodstream_uploader(bot, message):
